@@ -31,6 +31,8 @@ fn perform_one_random_experiment()-> Vec<i32> {
 
 fn is_case_of_interest(experiment: Vec<i32>) -> bool {
   let mut wie_oft_zweimal = 0;
+  let mut wie_viele_zahlen_gewuerfelt = 0;
+  let mut result = false;
 
   let mut augenzahlen: Vec<i32> = vec![0, 0, 0, 0, 0, 0];
 
@@ -41,14 +43,13 @@ fn is_case_of_interest(experiment: Vec<i32>) -> bool {
 
   for haeufigkeit in augenzahlen {
       if haeufigkeit == 2 { wie_oft_zweimal += 1; }
+      if haeufigkeit > 0 { wie_viele_zahlen_gewuerfelt += 1}
   }
 
-  if wie_oft_zweimal == 1 {
-      return true;
-  } else {
-      return false;
-  }
+  if wie_viele_zahlen_gewuerfelt == 4 { result = true; }
+  if wie_viele_zahlen_gewuerfelt == 3 { result = true; }
 
+  return result;
 }
 
 fn run_experiments(num: i32) {

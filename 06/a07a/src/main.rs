@@ -37,7 +37,7 @@ fn is_case_of_interest(experiment: Vec<i32>) -> bool {
       }
   }
 
-  if num_groesser_vier >= 2 {
+  if num_groesser_vier > 2 {
       return true;
   } else {
       return false;
