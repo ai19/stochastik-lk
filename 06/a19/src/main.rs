@@ -153,6 +153,7 @@ fn main() {
     println!("{:?}", args);
     let (num_blocks, start, a, b, m) = get_args(args);
     println!("{:?}   {:?}   {:?}  {:?}  {:?}", num_blocks, start, a, b, m);
+    // x_n+1 = a*x_n + b mod m
     let vec = modulo_generator(num_blocks, start, a, b, m);
 //    println!("{:?}", vec);
     println!("Ziffern-Auszähl-Test:"); // {:?}", ziffern_auszaehl_test(&vec));
